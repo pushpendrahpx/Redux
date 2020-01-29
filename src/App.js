@@ -1,7 +1,9 @@
 import React from 'react';
 import './App.css';
+import {connect } from 'react-redux'
 
-function App() {
+function App(props) {
+  console.log(props)
   return (
     <div className="App">
        <header className="App-header">
@@ -21,4 +23,10 @@ function App() {
   );
 }
 
-export default App;
+const mapStateToProps = (state)=>{
+  return({
+    myname:state.name
+  })
+}
+
+export default connect(mapStateToProps)(App);

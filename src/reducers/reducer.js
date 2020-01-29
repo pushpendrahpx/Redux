@@ -3,6 +3,7 @@ const iState = {
     email:"Pushpendra.hpx2001@gmail.com",
     wishes:['eat','code']
 }
-const reducer = (state,action)=>{
-
+const reducer = (state = iState,action)=>{
+    return state;
 }
+export default reducer;
